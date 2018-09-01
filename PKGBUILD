@@ -30,6 +30,7 @@ package() {
             ;;
     esac
     frpdir=$srcdir/frp_${pkgver}_linux_${ARCH}
+    backup=(etc/frp/{frpc.ini,frps.ini,frpc_full.ini,frps_full.ini})
 
     mkdir -p $pkgdir/usr/bin
     install -m755  $frpdir/frpc $pkgdir/usr/bin/frpc
